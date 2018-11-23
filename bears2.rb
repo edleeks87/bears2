@@ -11,6 +11,11 @@ class BearsTwo
     arr << 'string'
     arr
   end
+
+  def map_over_array(arr)
+    arr.map(&:class)
+  end
 end
 
-p BearsTwo.new.heterogeogenoous_array
+# bear = BearsTwo.new
+# p bear.map_over_array(bear.heterogeogenoous_array)
