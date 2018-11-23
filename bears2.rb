@@ -32,4 +32,15 @@ class BearsTwo
     arr[first] = arr[sec]
     arr[sec] = temp
   end
+
+  def binary_search(arr, val, low, high)
+    arr = arr.sort
+    return nil if low > high
+
+    mid = (high + low) / 2
+    return mid if arr[mid] == val
+    return binary_search(arr, val, low, mid - 1) if arr[mid] > val
+
+    binary_search(arr, val, mid + 1, high)
+  end
 end
