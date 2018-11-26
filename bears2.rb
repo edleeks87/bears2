@@ -48,6 +48,8 @@ class BearsTwo
     left = merge_sort(arr[0...mid])
     right = merge_sort(arr[mid..-1])
     sorted = []
+    # removes and concats the lesser of the two values at the front of the split arrays
+    # only does this when neither of the split arrays returns true for empty?
     sorted << ((left.first < right.first) ? left.shift : right.shift) while [left, right].none?(&:empty?)
     sorted + left + right
   end

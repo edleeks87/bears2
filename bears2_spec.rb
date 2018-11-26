@@ -3,7 +3,7 @@
 require_relative 'bears2'
 # :nodoc
 RSpec.describe BearsTwo do
-  describe '#michael_bubble_sort' do
+  describe '#bubble_sort' do
     let(:array) do
       [
         30_288, 36_994, 34_450, 20_909, 23_224, 42_644, 52_812, 61_530, 25_129,
